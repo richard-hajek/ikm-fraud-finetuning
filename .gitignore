@@ -1,0 +1,8 @@
+_artifacts/**/*
+_data/**/*
+_output/**/*
+!_artifacts/.gitkeep
+!_data/.gitkeep
+!_output/.gitkeep
+.idea
+.venv
