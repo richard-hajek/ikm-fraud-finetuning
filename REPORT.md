@@ -80,3 +80,7 @@ The objective of this work is to reproduce and improve the credit card fraud det
 ## Conclusion
 
 The original model by gpreda was effectively reproduced and fine-tuned. Grid search with parallelization provided an optimized LightGBM model with better hyperparameters. Evaluation on the test set confirms the operational viability of the tuned classifier in high-imbalance fraud detection scenarios.
+
+The fine tuning has improved the performance from 0.94 to 0.98.
+
+![img.png](img.png)
