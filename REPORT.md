@@ -54,13 +54,14 @@ The objective of this work is to reproduce and improve the credit card fraud det
 - Method: Grid Search Cross-Validation (3-fold)
   - Parallelization: Utilized all cores (`n_jobs=-1`)
   - Parameters Tuned:
-    - `learning_rate`: [0.05, 0.01, 0.005]
-    - `num_leaves`: [7, 5]
-    - `max_depth`: [5, 4, 3]
+    - `learning_rate`: [0.05, 0.08, 0.001]
+    - `num_leaves`: [7, 5, 8]
+    - `max_depth`: [5, 4, 3, 6]
     - `min_child_samples`: [100, 200]
     - `max_bin`: [100, 200]
     - `subsample`: [0.9, 0.8]
     - `colsample_bytree`: [0.7]
+    - `scale_pos_weight`: [150, 200, 250]
   - Other Parameters: Held constant due to dataset characteristics (e.g., `scale_pos_weight=150`)
 - Class imbalance addressed via `scale_pos_weight` and stratified splits
 - Early stopping and validation sets incorporated for generalization control
@@ -81,6 +82,6 @@ The objective of this work is to reproduce and improve the credit card fraud det
 
 The original model by gpreda was effectively reproduced and fine-tuned. Grid search with parallelization provided an optimized LightGBM model with better hyperparameters. Evaluation on the test set confirms the operational viability of the tuned classifier in high-imbalance fraud detection scenarios.
 
-The fine tuning has improved the performance from 0.94 to 0.98.
+The fine-tuning has improved the performance from 0.94 to 0.98.
 
 ![img.png](img.png)
